@@ -24,3 +24,10 @@ docker-compose up -d
 ```bash
 npm run start:dev
 ```
+
+7. Ejectuar SEED
+   POST al siguiente endpoint
+
+```bash
+http://localhost:3000/api/seed
+```
