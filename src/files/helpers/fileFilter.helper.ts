@@ -1,3 +1,5 @@
+import { Request } from 'express';
+
 export const fileFilter = (
   req: Request,
   file: Express.Multer.File,
