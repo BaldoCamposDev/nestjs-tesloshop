@@ -35,7 +35,7 @@ export class AuthService {
 
       return {
         ...userWithoutPassword,
-        token: this.getJwtToken({ id: user.id, email: user.email }),
+        token: this.getJwtToken({ id: user.id }),
       };
     } catch (error) {
       this.handleExceptions(error);
@@ -58,7 +58,7 @@ export class AuthService {
 
     return {
       ...user,
-      token: this.getJwtToken({ id: user.id, email: user.email }),
+      token: this.getJwtToken({ id: user.id }),
     };
   }
 
