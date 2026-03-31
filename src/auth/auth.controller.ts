@@ -7,6 +7,7 @@ import {
   Req,
   Headers,
   SetMetadata,
+  HttpCode,
 } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { CreateUserDto, LoginUserDto } from './dto';
@@ -28,6 +29,7 @@ export class AuthController {
   }
 
   @Post('login')
+  @HttpCode(200)
   loginUser(@Body() loginUserDto: LoginUserDto) {
     return this.authService.login(loginUserDto);
   }
