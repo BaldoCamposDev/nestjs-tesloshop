@@ -64,7 +64,7 @@ export class MessagesWsGateway
     // });
 
     this.wss.emit('message-from-server', {
-      fullName: client.id,
+      fullName: this.messagesWsService.getUserFullNameBySocketId(client.id),
       message: payload.message || 'no-message!!',
     });
   }

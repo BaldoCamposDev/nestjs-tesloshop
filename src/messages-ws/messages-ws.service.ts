@@ -33,4 +33,8 @@ export class MessagesWsService {
   getConectedClients(): string[] {
     return Object.keys(this.connectedClients);
   }
+
+  getUserFullNameBySocketId(socketId: string) {
+    return this.connectedClients[socketId].user.fullName;
+  }
 }
