@@ -50,7 +50,7 @@ export class MessagesWsGateway
     // });
 
     this.wss.emit('message-from-server', {
-      fullName: 'Soy yo!',
+      fullName: client.id,
       message: payload.message || 'no-message!!',
     });
   }
